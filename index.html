@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интерактивный помощник по выбору организационно-правовой формы бизнеса">
+  <title>ОПФ — выбор формы бизнеса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ОПФ — на главную"><span class="brand-mark">О</span><span>пф<span class="brand-dot">.</span></span></a>
+    <span class="top-note">Инструмент для начинающих предпринимателей</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> ПРАКТИЧЕСКИЙ ПОМОЩНИК</div>
+        <h1>Выбери форму<br>своего <em>бизнеса.</em></h1>
+        <p>Ответь на пять вопросов о своей идее — и получи рекомендацию по организационно-правовой форме с объяснением, почему она тебе подходит.</p>
+        <div class="hero-meta"><span class="meta-icon">✳</span> 5 вопросов <span class="meta-separator">·</span> около 2 минут</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-card card-back"><span>ИДЕЯ</span><b>→</b></div>
+        <div class="art-card card-front"><small>БИЗНЕС</small><strong>ОПФ</strong><span class="art-check">✓</span></div>
+        <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
+        <div class="art-caption">от идеи<br>к структуре</div>
+      </div>
+    </section>
+
+    <section class="workspace" id="quiz">
+      <div class="section-heading">
+        <div><div class="eyebrow">01 / АНКЕТА</div><h2>Расскажи о проекте</h2></div>
+        <div class="progress-wrap"><span id="progress-label">Вопрос 1 из 5</span><div class="progress-track"><div id="progress-bar"></div></div></div>
+      </div>
+
+      <form id="business-form">
+        <div class="question active" data-step="0">
+          <div class="question-number">01</div>
+          <div class="question-content">
+            <h3>Чем будет заниматься бизнес?</h3>
+            <p class="hint">Выбери основное направление деятельности.</p>
+            <div class="option-grid">
+              <label class="choice"><input type="radio" name="activity" value="trade" required><span class="choice-icon">▤</span><span><b>Торговля</b><small>Магазин, интернет-магазин</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="activity" value="services"><span class="choice-icon">✳</span><span><b>Услуги</b><small>Студия, консалтинг, ремонт</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="activity" value="production"><span class="choice-icon">⚙</span><span><b>Производство</b><small>Изготовление товаров</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="activity" value="it"><span class="choice-icon">⌘</span><span class="choice-copy"><b>IT и технологии</b><small>Разработка, цифровые продукты</small></span><i class="choice-radio"></i></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" data-step="1">
+          <div class="question-number">02</div>
+          <div class="question-content">
+            <h3>Какого масштаба будет бизнес?</h3>
+            <p class="hint">Оцени предполагаемый размер проекта на старте.</p>
+            <div class="option-list">
+              <label class="choice"><input type="radio" name="scale" value="small" required><span class="choice-icon">↗</span><span><b>Малый</b><small>Небольшая команда или работа самостоятельно</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="scale" value="medium"><span class="choice-icon">▥</span><span><b>Средний</b><small>Несколько подразделений или расширенная команда</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="scale" value="large"><span class="choice-icon">▦</span><span><b>Крупный</b><small>Большой штат, несколько направлений или регионов</small></span><i></i></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" data-step="2">
+          <div class="question-number">03</div>
+          <div class="question-content">
+            <h3>Сколько будет учредителей?</h3>
+            <p class="hint">Укажи количество людей, которые создают бизнес совместно.</p>
+            <div class="option-grid two-col">
+              <label class="choice"><input type="radio" name="founders" value="1" required><span class="choice-icon">01</span><span><b>Один</b><small>Я создаю бизнес самостоятельно</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="founders" value="2-4"><span class="choice-icon">02+</span><span><b>От 2 до 4</b><small>Есть партнёры</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="founders" value="5+"><span class="choice-icon">05+</span><span><b>Пять и более</b><small>Большая группа участников</small></span><i></i></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" data-step="3">
+          <div class="question-number">04</div>
+          <div class="question-content">
+            <h3>Планируешь привлекать инвестиции?</h3>
+            <p class="hint">Например, вклады инвесторов для развития и масштабирования.</p>
+            <div class="option-list">
+              <label class="choice"><input type="radio" name="investment" value="no" required><span class="choice-icon">—</span><span><b>Нет, достаточно собственных средств</b><small>Развиваю бизнес самостоятельно или с партнёрами</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="investment" value="maybe"><span class="choice-icon">◇</span><span><b>Возможно, в будущем</b><small>Пока рассматриваю разные варианты</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="investment" value="yes"><span class="choice-icon">↗</span><span><b>Да, это важная часть плана</b><small>Хочу привлекать внешних инвесторов</small></span><i></i></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question" data-step="4">
+          <div class="question-number">05</div>
+          <div class="question-content">
+            <h3>Какой уровень ответственности предпочтителен?</h3>
+            <p class="hint">Выбери, насколько личное имущество должно быть отделено от рисков бизнеса.</p>
+            <div class="option-list">
+              <label class="choice"><input type="radio" name="liability" value="limited" required><span class="choice-icon">⌑</span><span><b>Ограниченная</b><small>Предпочитаю риск в пределах вклада, с учётом предусмотренных законом исключений</small></span><i></i></label>
+              <label class="choice"><input type="radio" name="liability" value="personal"><span class="choice-icon">◎</span><span><b>Готов(а) отвечать личным имуществом</b><small>Принимаю повышенную личную имущественную ответственность</small></span><i></i></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="button button-ghost" id="back-btn" disabled>← Назад</button>
+          <span class="step-hint">Выбери один вариант, чтобы продолжить</span>
+          <button type="button" class="button button-primary" id="next-btn">Далее <span>→</span></button>
+          <button type="submit" class="button button-primary hidden" id="submit-btn">Получить рекомендацию <span>↗</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="result hidden" id="result" aria-live="polite">
+      <div class="result-top"><div><div class="eyebrow">02 / РЕЗУЛЬТАТ АНАЛИЗА</div><h2>Твоя рекомендация</h2></div><button class="reset-link" id="reset-btn">↻ Пройти заново</button></div>
+      <div class="result-card">
+        <div class="result-main">
+          <div class="result-label">НАИБОЛЕЕ ПОДХОДЯЩИЙ ВАРИАНТ</div>
+          <div class="result-title-row"><div><div class="result-abbr" id="result-abbr">ООО</div><h3 id="result-name">Общество с ограниченной ответственностью</h3></div><div class="result-symbol" id="result-symbol">◎</div></div>
+          <p id="result-description"></p>
+          <div class="fit-line"><span>Соответствие выбранным критериям</span><b id="fit-score">—</b></div>
+          <div class="fit-track"><div id="fit-bar"></div></div>
+        </div>
+        <div class="result-details">
+          <div><div class="detail-heading">ПОЧЕМУ ЭТОТ ВАРИАНТ</div><ul id="reasons"></ul></div>
+          <div><div class="detail-heading">ПРЕИМУЩЕСТВА</div><ul id="advantages"></ul></div>
+        </div>
+      </div>
+      <div class="alternatives" id="alternatives-wrap"><h3>Другие варианты</h3><div id="alternatives"></div></div>
+      <div class="disclaimer"><b>Важно:</b> результат носит информационный и учебный характер. Он не заменяет консультацию юриста или бухгалтера. Перед регистрацией проверь актуальные требования к выбранной форме, налогообложению и лицензированию конкретной деятельности. Ограниченная ответственность не исключает предусмотренную законом личную или субсидиарную ответственность.</div>
+    </section>
+
+    <section class="forms-section">
+      <div class="section-heading"><div><div class="eyebrow">03 / СПРАВОЧНИК</div><h2>Какие формы сравниваем</h2></div><p class="section-intro">Кратко о четырёх организационно-правовых формах, которые учитывает алгоритм.</p></div>
+      <div class="form-cards">
+        <article class="form-card"><span class="form-index">01</span><div class="form-icon">↗</div><h3>ИП</h3><p>Физическое лицо, зарегистрированное для ведения предпринимательской деятельности. Не имеет статуса юридического лица.</p><span class="tag">Один предприниматель</span></article>
+        <article class="form-card"><span class="form-index">02</span><div class="form-icon">◎</div><h3>ООО</h3><p>Хозяйственное общество с уставным капиталом, разделённым на доли участников. Может быть создано одним или несколькими лицами.</p><span class="tag">1–50 участников</span></article>
+        <article class="form-card"><span class="form-index">03</span><div class="form-icon">▤</div><h3>АО</h3><p>Хозяйственное общество, уставный капитал которого разделён на акции. Подходит для проектов, где важна акционерная структура.</p><span class="tag">Акции и инвесторы</span></article>
+        <article class="form-card"><span class="form-index">04</span><div class="form-icon">⚙</div><h3>Производственный кооператив</h3><p>Добровольное объединение граждан на основе членства для совместной производственной или иной хозяйственной деятельности.</p><span class="tag">От 5 членов</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span class="footer-brand">опф<span>.</span></span><span>Учебный проект по экономике · 2026</span><a href="#quiz">Вернуться к анкете ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
